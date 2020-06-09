@@ -18,7 +18,8 @@ export default class jobsCard extends Component{
     }
 
     registerSocket(){
-        const socket = io('https://fullstackbackend2.herokuapp.com/');
+        const socket = io('process.env.REACT_APP_API_URL');
+        //process.env.REACT_APP_API_URL
         socket.on('newjob', newjob=>{
             this.setState({jobs : [newjob,...this.state.jobs]});
             this.loadData();
