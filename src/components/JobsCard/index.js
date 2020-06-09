@@ -22,7 +22,7 @@ export default class jobsCard extends Component{
         //process.env.REACT_APP_API_URL
         socket.on('newjob', newjob=>{
             this.setState({jobs : [newjob,...this.state.jobs]});
-            this.loadData();
+          
         });
     }
 
